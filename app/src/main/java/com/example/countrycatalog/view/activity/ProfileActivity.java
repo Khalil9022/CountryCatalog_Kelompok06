@@ -21,7 +21,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
     TextView tvUsername, tvEmail, tvCountry;
     Button btnEdit, btnLogout;
-    ImageView ivBack;
+    ImageView ivBack,ivFavorite;
 
     SharedPreferences sharedPreferences;
 
@@ -45,6 +45,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         btnLogout = findViewById(R.id.btn_logout);
 
         ivBack = findViewById(R.id.profile_iv_back);
+        ivFavorite = findViewById(R.id.profile_iv_favorite);
 
         sharedPreferences = getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
 
@@ -53,6 +54,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         btnEdit.setOnClickListener(this);
         btnLogout.setOnClickListener(this);
         ivBack.setOnClickListener(this);
+        ivFavorite.setOnClickListener(this);
 
     }
 
@@ -95,6 +97,11 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
             case R.id.profile_iv_back:
                 intent = new Intent(ProfileActivity.this, ContentActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.profile_iv_favorite:
+                intent = new Intent(ProfileActivity.this, FavoriteActivity.class);
                 startActivity(intent);
                 break;
         }

@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -48,7 +49,7 @@ public class CountryFragment extends Fragment implements View.OnClickListener {
         countryAdapter.notifyDataSetChanged();
 
         rvCountry = view.findViewById(R.id.rv_main);
-        rvCountry.setLayoutManager(new LinearLayoutManager(getContext()));
+        rvCountry.setLayoutManager(new GridLayoutManager(getContext(),2));
 
         countryViewModel = new ViewModelProvider(this).get(CountryViewModel.class);
         countryViewModel.setCountryDiscover();

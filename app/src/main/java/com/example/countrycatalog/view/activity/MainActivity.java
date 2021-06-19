@@ -42,6 +42,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         String sUsername = sharedPreferences.getString(KEY_USERNAME, null);
 
+        if (sUsername != null){
+            Intent intent = new Intent(getApplicationContext(), ContentActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
         btnlogin.setOnClickListener(this);
     }

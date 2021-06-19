@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#243B4E"
+    tools:context=".view.activity.EditFavoriteActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_edit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#FA158109"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/editprofile_iv_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/jdl2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:fontFamily="cursive"
+                android:text="EDIT FAVORITE"
+                android:textSize="25sp"></TextView>
+
+            <TextView
+                android:id="@+id/editfavorite_tv_nameHoliday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="bottom"
+                android:padding="5dp"
+                android:text="Name Holiday : "
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editfavorite_et_nameHoliday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Input New Holiday Name.."
+                android:padding="10dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/editfavorite_tv_dateHoliday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:padding="5dp"
+                android:text="Date Holiday : "
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editfavorite_et_dateHoliday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Input New Date Holiday.."
+                android:padding="10dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/editfavorite_tv_countryHoliday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:padding="5dp"
+                android:text="Country Holiday: "
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/editfavorite_et_countryHoliday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Input New Country Holiday.."
+                android:padding="10dp"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/editfavorite_btn_edit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="#FBE02A"
+                android:text="EDIT"
+                android:textColor="@android:color/white"
+                android:textSize="10dp"
+                android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

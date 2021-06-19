@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CountryCatalog">
-        <activity android:name=".view.activity.EditProfileActivity"></activity>
+        <activity android:name=".view.activity.DetailedCountryActivity"></activity>
+        <activity android:name=".view.activity.DetailedHolidayActivity" />
+        <activity android:name=".view.activity.EditFavoriteActivity" />
+        <activity android:name=".view.activity.FavoriteActivity" />
+        <activity android:name=".view.activity.EditProfileActivity" />
         <activity android:name=".view.activity.ProfileActivity" />
         <activity android:name=".view.activity.ContentActivity" />
         <activity android:name=".view.activity.MainActivity">

@@ -2,27 +2,36 @@ package com.example.countrycatalog.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.countrycatalog.R;
+import com.example.countrycatalog.databaseLokal.entity.AppDatabase;
+import com.example.countrycatalog.databaseLokal.entity.DataFavoriteHoliday;
 import com.example.countrycatalog.model.country.CountriesItem;
 import com.example.countrycatalog.model.holiday.HolidaysItem;
+import com.example.countrycatalog.view.activity.DetailedHolidayActivity;
+import com.example.countrycatalog.view.activity.FavoriteActivity;
 import com.example.countrycatalog.view.activity.ProfileActivity;
 
 import java.util.ArrayList;
 
 public class HolidayAdapter extends RecyclerView.Adapter<HolidayAdapter.ViewHolder>{
 
+    public String setNameHoliday,setDateHoliday,setNameCountry;
     private ArrayList<HolidaysItem> holidaysItems = new ArrayList<>();
     private Context context;
+    AppDatabase appDatabase;
 
     public void setData(ArrayList<HolidaysItem> items){
         holidaysItems.clear();
@@ -46,6 +55,17 @@ public class HolidayAdapter extends RecyclerView.Adapter<HolidayAdapter.ViewHold
         holder.tvNameHoliday.setText(holidaysItems.get(position).getName());
         holder.tvDateHoliday.setText(holidaysItems.get(position).getDate());
         holder.tvCountryHoliday.setText(holidaysItems.get(position).getCountry());
+
+        holder.cvItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DetailedHolidayActivity.class);
+                intent.putExtra("name_holiday", holidaysItems.get(position).getName());
+                intent.putExtra("date_holiday", holidaysItems.get(position).getDate());
+                intent.putExtra("country_holiday", holidaysItems.get(position).getCountry());
+                context.startActivities(new Intent[]{intent});
+            }
+        });
     }
 
     @Override
