@@ -12,7 +12,7 @@ import com.example.countrycatalog.R;
 
 public class DetailedCountryActivity extends AppCompatActivity {
 
-    private TextView tv_nameSubdivision,tv_number;
+    private TextView tv_nameCountry,tv_codeCountry;
     private ImageView iv_flagCountry,iv_back;
 
     @Override
@@ -22,18 +22,18 @@ public class DetailedCountryActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        tv_nameSubdivision = findViewById(R.id.detailedcountry_tv_nameCountry);
-        tv_number = findViewById(R.id.detailedcountry_tv_number);
+        tv_nameCountry = findViewById(R.id.detailedcountry_tv_nameCountry);
+        tv_codeCountry = findViewById(R.id.detailedcountry_tv_codeCountry);
         iv_flagCountry = findViewById(R.id.detailedcountry_iv_countryFlag);
         iv_back = findViewById(R.id.detailedcountry_iv_back);
 
-        tv_nameSubdivision.setText(getIntent().getStringExtra("name_country"));
-
-        Bundle forNumber = getIntent().getExtras();
-        int number = forNumber.getInt("id_country");
-        String sNumber = String.valueOf(number);
-        tv_number.setText(sNumber);
-
+//        Bundle forNumber = getIntent().getExtras();
+//        int number = forNumber.getInt("id_country");
+//        String sNumber = String.valueOf(number);
+//
+//        tv_number.setText(sNumber);
+        tv_nameCountry.setText(getIntent().getStringExtra("name_country"));
+        tv_codeCountry.setText(getIntent().getStringExtra("code_country"));
         Glide.with(getApplicationContext()).load(getIntent().getStringExtra("flag_country")).into(iv_flagCountry);
 
         iv_back.setOnClickListener(new View.OnClickListener() {
@@ -43,4 +43,5 @@ public class DetailedCountryActivity extends AppCompatActivity {
             }
         });
     }
+
 }

@@ -50,57 +50,13 @@
         android:textColor="@color/white"
         android:textSize="24sp" />
 
-    <LinearLayout
-        android:id="@+id/ll_subdivision"
+    <TextView
+        android:id="@+id/detailedcountry_tv_codeCountry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/detailedcountry_tv_nameCountry"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/tv_subdivision"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-
-            android:text="Subdivision : "
-            android:textColor="@color/white"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/detailedcountry_tv_number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:text="hello world"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ll_preview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/ll_subdivision"
-        android:layout_marginHorizontal="36dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="15dp"
-        android:alpha="0.9"
-        android:background="@color/white"
-        android:elevation="8dp"
-        android:orientation="vertical"
-        android:padding="18dp">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/detailedcountry_rv_main"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:listitem="@layout/item_subdivision" />
-
-    </LinearLayout>
-
+        android:text="code Negara"
+        android:layout_below="@+id/detailedcountry_tv_nameCountry"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"/>
 
 </RelativeLayout>

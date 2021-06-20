@@ -60,9 +60,10 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
 
                 intent.putExtra("name_country", countriesItems.get(position).getName());
                 intent.putExtra("flag_country", countriesItems.get(position).getFlag());
+                intent.putExtra("code_country",countriesItems.get(position).getCode());
 
-                int number = position;
-                intent.putExtra("id_Country", number);
+//                int number = holder.getAdapterPosition();
+//                intent.putExtra("id_Country", number);
                 context.startActivities(new Intent[]{intent});
             }
         });

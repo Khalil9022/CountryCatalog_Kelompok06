@@ -36,7 +36,7 @@ public class CountryFragment extends Fragment implements View.OnClickListener {
     private RecyclerView rvCountry;
     private CountryViewModel countryViewModel;
 
-    ImageView ivProfile;
+    private ImageView ivProfile;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -85,6 +85,5 @@ public class CountryFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_country, container, false);
     }
-
 
 }
