@@ -16,7 +16,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/editprofile_iv_back"
+            android:id="@+id/editfavorite_iv_back"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_gravity="center"

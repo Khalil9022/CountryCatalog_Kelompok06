@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.countrycatalog.R;
@@ -24,6 +25,7 @@ public class EditFavoriteActivity extends AppCompatActivity implements HolidayCo
     private EditText et_nameHoliday, et_dateHoliday, et_countryHoliday ;
     private Button btn_edit;
     private String setNameHoliday, setDateHoliday, setCountryHoliday;
+    private ImageView iv_back;
     private boolean edit = false;
     private int id;
 
@@ -37,6 +39,7 @@ public class EditFavoriteActivity extends AppCompatActivity implements HolidayCo
         et_nameHoliday = findViewById(R.id.editfavorite_et_nameHoliday);
         et_dateHoliday = findViewById(R.id.editfavorite_et_dateHoliday);
         et_countryHoliday = findViewById(R.id.editfavorite_et_countryHoliday);
+        iv_back = findViewById(R.id.editfavorite_iv_back);
 
         btn_edit = findViewById(R.id.editfavorite_btn_edit);
         holidayPresenter = new HolidayPresenter(this);
@@ -53,6 +56,7 @@ public class EditFavoriteActivity extends AppCompatActivity implements HolidayCo
         et_countryHoliday.setText(setCountryHoliday);
 
         btn_edit.setOnClickListener(this);
+        iv_back.setOnClickListener(this);
     }
 
     @Override
@@ -94,6 +98,9 @@ public class EditFavoriteActivity extends AppCompatActivity implements HolidayCo
                 edit = false;
             }
             resetForm();
+        }
+        if(v == iv_back){
+            finish();
         }
     }
 }
